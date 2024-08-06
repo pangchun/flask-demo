@@ -1,0 +1,15 @@
+Single-database configuration for Flask.
+
+数据迁移脚本命令:
+
+# 这将在你的项目根目录下创建一个 migrations 文件夹，只需要执行一次
+flask db init
+
+# 生成迁移脚本，会自动检测到继承了db.Model的类，自动转为sql语句
+flask db migrate
+
+# 应用最新的迁移脚本到数据库【需要提前将数据库创建好】
+flask db upgrade
+
+# 如果要撤销操作
+flask db downgrade
